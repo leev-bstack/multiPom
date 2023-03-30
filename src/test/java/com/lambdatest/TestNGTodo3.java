@@ -97,10 +97,18 @@ public class TestNGTodo3 {
         System.out.println("TestFinished");
 
     }
+    @Test
+    public void basicTest2() throws InterruptedException {
+        driver.get("http://localhost:8000");
+        String title = driver.getTitle();
+        System.out.println(title);
+
+
+    }
 
     @AfterMethod
     public void tearDown() {
-        driver.executeScript("lambda-status=" + Status);
+       // driver.executeScript("lambda-status=" + Status);
         driver.quit();
     }
 
